@@ -1,4 +1,6 @@
-># Problema de Envio de Comando
+# ERRORES COMUNES
+---
+>## Problema de Envio de Comando
 >---
 >### Errores encontrados:
 >
