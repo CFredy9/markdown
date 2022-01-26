@@ -1,6 +1,6 @@
 # ERRORES COMUNES
 ---
->## Problema de Envio de Comando
+>## <span style="color:blue"> Problema de Envio de Comando </span>
 >
 >### Errores encontrados:
 >
@@ -12,7 +12,7 @@
 >**En resumen los puertos estaban configurados mal, para habilitar los cambios tuvieron que quitar la bateria y volverla a poner**
 
 ---
->## Problema de Peticiones
+>## <span style="color:blue"> Problema de Peticiones </span>
 >
 >### Errores encontrados:
 >
