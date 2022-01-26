@@ -1,7 +1,7 @@
 # ERRORES COMUNES
 ---
 >## Problema de Envio de Comando
->---
+>
 >### Errores encontrados:
 >
 >>1. El puerto configurado estaba mal, apuntaba al 7027 y tenía que apuntar al 6903
@@ -13,7 +13,7 @@
 
 ---
 >## Problema de Peticiones
->---
+>
 >### Errores encontrados:
 >
 >>1. El puerto configurado estaba mal, apuntaba al 7027 y tenía que apuntar al 6903
