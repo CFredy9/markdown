@@ -10,3 +10,12 @@
 >El model de GPS que usaba era el "fmb130"
 >
 >**En resumen los puertos estaban configurados mal, para habilitar los cambios tuvieron que quitar la bateria y volverla a poner**
+
+---
+>## Problema de Peticiones
+>---
+>### Errores encontrados:
+>
+>>1. El puerto configurado estaba mal, apuntaba al 7027 y tenía que apuntar al 6903
+>
+>**En resumen no funciona**
