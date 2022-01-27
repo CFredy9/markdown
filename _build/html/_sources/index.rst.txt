@@ -10,8 +10,8 @@ Welcome to Delta's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   /archivo.md
-   /prueba.md
+   /reporte.md
+   /errores.md
 
 
 Indices and tables
