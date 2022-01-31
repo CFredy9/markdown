@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOCUMENTACIÓN &mdash; Delta  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ERRORES COMUNES" href="errores.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Delta
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="reporte.html">ERRORES AREA TÉCNICA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errores.html">ERRORES COMUNES</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DOCUMENTACIÓN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#span-style-color-blue-pasos-para-homologacion-de-dispositivos-span"><span style="color:blue"> Pasos para homologación de dispositivos: </span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#span-style-color-blue-pasos-para-agregar-un-nuevo-dispositivo-span"><span style="color:blue"> Pasos para agregar un nuevo dispositivo: </span></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Delta</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>DOCUMENTACIÓN</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/documentacion.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="documentacion">
+<h1>DOCUMENTACIÓN<a class="headerlink" href="#documentacion" title="Permalink to this headline"></a></h1>
+<hr class="docutils" />
+<section id="span-style-color-blue-pasos-para-homologacion-de-dispositivos-span">
+<h2><span style="color:blue"> Pasos para homologación de dispositivos: </span><a class="headerlink" href="#span-style-color-blue-pasos-para-homologacion-de-dispositivos-span" title="Permalink to this headline"></a></h2>
+<ol class="simple">
+<li><p>Tener los datos tomados desde Traccar, que lleguen bien y que tengamos dispositivos marcando, mejor si nos envían pruebas de todo lo que necesiten validar, alarmas, encendidos y apagados (Andrea y alguno de ventas).</p></li>
+<li><p>Ver que traccar no esté generando muchas tramas sin reconocer de ese puerto y de algún dispositivo en especial (Andrea).</p></li>
+<li><p>Opcionalmente hay que validar si tenemos listado de comandos que podamos enviar, ésto se puede validar en el código de traccar y también cotejarlo con la documentación del dispositivo (Andrea).</p></li>
+<li><p>Se verifica con los eventos que toma el Ingestor (es otra api quien procesa los datos de traccar) para validar que reconozca los eventos correctos (Andrea - Carlos).</p></li>
+<li><p>Se habilita en Ingestor el paso de ese protocolo (Dhaby).</p></li>
+<li><p>Hemos terminado la homologación.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="span-style-color-blue-pasos-para-agregar-un-nuevo-dispositivo-span">
+<h2><span style="color:blue"> Pasos para agregar un nuevo dispositivo: </span><a class="headerlink" href="#span-style-color-blue-pasos-para-agregar-un-nuevo-dispositivo-span" title="Permalink to this headline"></a></h2>
+<ol class="simple">
+<li><p>Agregar el dispositivo a la coleccion GpsModel de erebus(deltaBD en qa) si el brand y el protocol existen solo se agrega el brandID y el protocolID, si no deben crearse en sus respectivas colecciones de erebus (Brand , Protocol) y se agregan los ids generados.</p></li>
+<li><p>Agregar los comandos que se asignarán al nuevo dispositivo en la colección EquipmentTypeCommands de efesto (deltatrackingBD) usando el dato de device de GpsModel como typeID en esta colección.</p></li>
+<li><p>Asignarle el configEquipmentID que corresponde en la colección EquipmentConfiguration de efesto (deltatrackingBD) normalmente se agrega un _na o _nc (esto se debe a que en la versión anterior skyguard configuraba puertos normalmente abiertos o normalmente cerrados por lo que se requieren comandos distintos para realizar determinada accion), se asigna el accountID (antes de guardar este registro ver el siguiente paso).</p></li>
+<li><p>En la misma colección de EquipmentConfiguration en el campo commands se agregan los Json de los comandos que deben listarse  y mostrarse para ser enviados.</p></li>
+<li><p>Comprobar que si se listan los comandos en ui.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="errores.html" class="btn btn-neutral float-left" title="ERRORES COMUNES" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Fredy.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

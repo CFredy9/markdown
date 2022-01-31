@@ -12,6 +12,7 @@ Welcome to Delta's documentation!
 
    /reporte.md
    /errores.md
+   /documentacion.md
 
 
 Indices and tables

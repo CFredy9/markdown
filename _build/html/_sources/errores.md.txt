@@ -42,3 +42,29 @@
 
 **Esto sucede porque no tiene los permisos correspondientes para iniciar sesión.**
 
+---
+
+## <span style="color:blue"> Error al asignar comandos </span>
+
+### Descripción:
+>A la hora de enviar comandos no manda ni aparece ninguno.
+
+### Soluciones posibles:
+
+>1. Darle en el botón editar y guardar los cambios.
+
+**NOTA: Esto error ya fue solucionado, pero los dispositivos que se crearon antes del 13 de Enero tendrán este inconveniente.**
+
+---
+
+## <span style="color:blue"> Pasos para la integración de nuevos protocolos: </span>
+1. Crear ticket.
+2. Identificar adecuadamente el protocolo.
+3. Enviar toda la documentación que tengan del dispositivo y del protocolo, incluyendo pdf (opcional).
+4. Conectar el dispositivo y si se interpreta bien en traccar, enviar todos los eventos que quieren homologar: como encendidos de motor, apagados, temperaturas, etc.
+5. Se verificará que todos los eventos que se enviaron hayan sido interpretados bien por el sistema (si no funciona correctamente pase al paso 6, si funciona se realiza el paso 7).
+6. Se programa una junta con el cliente para definir de que manera trabajar.
+7. Se empieza a trabajar.
+
+---
+

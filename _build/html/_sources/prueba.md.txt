@@ -39,6 +39,10 @@ This is an ~~striketrogh~~ text
 1. item 4
 
 <!-- Links -->
+
+| ![](icono_dispositivo.png) |
+| :--: | 
+
 [Faztweb.com](https://www.faztweb.com)
 
 [Faztweb.com](https://www.faztweb.com "Custom title")
