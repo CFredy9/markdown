@@ -1,17 +1,20 @@
 # DOCUMENTACIÓN
 ---
-## <span style="color:blue"> Pasos para homologación de dispositivos: </span>
-
-1. Tener los datos tomados desde Traccar, que lleguen bien y que tengamos dispositivos marcando, mejor si nos envían pruebas de todo lo que necesiten validar, alarmas, encendidos y apagados (Andrea y alguno de ventas).
-2. Ver que traccar no esté generando muchas tramas sin reconocer de ese puerto y de algún dispositivo en especial (Andrea).
-3. Opcionalmente hay que validar si tenemos listado de comandos que podamos enviar, ésto se puede validar en el código de traccar y también cotejarlo con la documentación del dispositivo (Andrea).
-4. Se verifica con los eventos que toma el Ingestor (es otra api quien procesa los datos de traccar) para validar que reconozca los eventos correctos (Andrea - Carlos).
-5. Se habilita en Ingestor el paso de ese protocolo (Dhaby).
-6. Hemos terminado la homologación.
+## <span style="color:nature"> Pasos para homologación de dispositivos: </span>
+~~~
+1. Verificar que el protocolo esté funcionando y activo en Traccar (Andrea)
+2. Verificar que tengamos tramas de éste protocolo ya recibidas con anterioridad para validar que todo se esta recibiendo correctamente, de lo contrario se espera a que un cliente nuevo conecte su dispositivo y se empieza a revisar los datos procesados (Andrea)
+3. Se obtienen todos los datos importantes de la columna attributes, que se obtiene del procesamiento de datos del protocolo
+4. Se verifica en el Ingestor que el protocolo esté activado (Carlos)
+5. Se valida que los datos como alarmas, encendidos, apagados, etc se estén validando correctamente en el ingestor, basado en los diagramas de procesamiento de eventos del ingestor (Carlos)
+6. Si no se tienen todos se debe programar los que la plataforma puede procesar
+7. Ya corroborada ésta parte, se puede indicar cuales son los eventos homologados del protocolo.
+~~~
+**En caso de que alguno de éstos pasos no esté completo, la Homologación se considera incompleta, puesto que puede que solo una parte del sistema esté lista y no todo lo que usamos para procesarlo**
 
 ---
 
-## <span style="color:blue"> Pasos para agregar un nuevo dispositivo: </span>
+## <span style="color:nature"> Pasos para agregar un nuevo dispositivo: </span>
 
 1. Agregar el dispositivo a la coleccion GpsModel de erebus(deltaBD en qa) si el brand y el protocol existen solo se agrega el brandID y el protocolID, si no deben crearse en sus respectivas colecciones de erebus (Brand , Protocol) y se agregan los ids generados.
 2. Agregar los comandos que se asignarán al nuevo dispositivo en la colección EquipmentTypeCommands de efesto (deltatrackingBD) usando el dato de device de GpsModel como typeID en esta colección.

@@ -10,7 +10,6 @@ Welcome to Delta's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   /reporte.md
    /errores.md
    /documentacion.md
 

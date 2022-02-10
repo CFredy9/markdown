@@ -17,11 +17,26 @@ import sphinx_pdj_theme
 #html_theme = 'sphinx_pdj_theme'
 #html_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
 import sphinx_rtd_theme
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+
+#html_theme = 'yummy_sphinx_theme'
+
+#import sphinx_press_theme
+#html_theme = 'press'
+
+html_logo = './_static/logo.jpeg'
+
+import sphinx_bootstrap_theme
+html_theme = 'bootstrap'
+html_theme_path = ['../lib/python3.5/site-packages/sphinx_bootstrap_theme']
+#OPCIONES DE TEMA
+#html_theme_options = {'bootswatch_theme': "cosmo"}
+#html_theme_options = {'bootswatch_theme': "cerulean"}
+html_theme_options = {'bootswatch_theme': "flatly"}
 
 # -- Project information -----------------------------------------------------
 
-project = 'Delta'
+project = 'Delta Tracking (Técnico)'
 copyright = '2022, Fredy'
 author = 'Fredy'
 
