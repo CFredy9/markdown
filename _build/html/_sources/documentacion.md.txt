@@ -3,12 +3,18 @@
 ## <span style="color:nature"> Pasos para homologación de dispositivos: </span>
 ~~~
 1. Verificar que el protocolo esté funcionando y activo en Traccar (Andrea)
-2. Verificar que tengamos tramas de éste protocolo ya recibidas con anterioridad para validar que todo se esta recibiendo correctamente, de lo contrario se espera a que un cliente nuevo conecte su dispositivo y se empieza a revisar los datos procesados (Andrea)
-3. Se obtienen todos los datos importantes de la columna attributes, que se obtiene del procesamiento de datos del protocolo
+2. Verificar que tengamos tramas de éste protocolo ya recibidas con anterioridad para 
+   validar que todo se esta recibiendo correctamente, de lo contrario se espera a que un 
+   cliente nuevo conecte su dispositivo y se empieza a revisar los datos procesados (Andrea)
+3. Se obtienen todos los datos importantes de la columna attributes, que se obtiene del 
+   procesamiento de datos del protocolo
 4. Se verifica en el Ingestor que el protocolo esté activado (Carlos)
-5. Se valida que los datos como alarmas, encendidos, apagados, etc se estén validando correctamente en el ingestor, basado en los diagramas de procesamiento de eventos del ingestor (Carlos)
+5. Se valida que los datos como alarmas, encendidos, apagados, etc se estén validando 
+   correctamente en el ingestor, basado en los diagramas de procesamiento de eventos del 
+   ingestor (Carlos)
 6. Si no se tienen todos se debe programar los que la plataforma puede procesar
-7. Ya corroborada ésta parte, se puede indicar cuales son los eventos homologados del protocolo.
+7. Ya corroborada ésta parte, se puede indicar cuales son los eventos homologados del 
+   protocolo.
 ~~~
 **En caso de que alguno de éstos pasos no esté completo, la Homologación se considera incompleta, puesto que puede que solo una parte del sistema esté lista y no todo lo que usamos para procesarlo**
 
